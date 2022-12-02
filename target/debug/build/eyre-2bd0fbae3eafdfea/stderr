@@ -1,5 +1,5 @@
 error[E0407]: method `backtrace` is not a member of trait `Error`
-  --> /Users/Antoine/Code/Rust/aoc_22_rust/target/debug/build/eyre-2bd0fbae3eafdfea/out/probe.rs:19:9
+  --> /Users/Antoine/Code/Rust/Aoc_22_RUST/target/debug/build/eyre-2bd0fbae3eafdfea/out/probe.rs:19:9
    |
 19 | /         fn backtrace(&self) -> Option<&Backtrace> {
 20 | |             let backtrace = Backtrace::capture();
@@ -11,13 +11,13 @@ error[E0407]: method `backtrace` is not a member of trait `Error`
    | |_________^ not a member of trait `Error`
 
 error[E0554]: `#![feature]` may not be used on the stable release channel
- --> /Users/Antoine/Code/Rust/aoc_22_rust/target/debug/build/eyre-2bd0fbae3eafdfea/out/probe.rs:2:16
+ --> /Users/Antoine/Code/Rust/Aoc_22_RUST/target/debug/build/eyre-2bd0fbae3eafdfea/out/probe.rs:2:16
   |
 2 |     #![feature(backtrace)]
   |                ^^^^^^^^^
 
 warning: the feature `backtrace` has been stable since 1.65.0 and no longer requires an attribute to enable
- --> /Users/Antoine/Code/Rust/aoc_22_rust/target/debug/build/eyre-2bd0fbae3eafdfea/out/probe.rs:2:16
+ --> /Users/Antoine/Code/Rust/Aoc_22_RUST/target/debug/build/eyre-2bd0fbae3eafdfea/out/probe.rs:2:16
   |
 2 |     #![feature(backtrace)]
   |                ^^^^^^^^^
