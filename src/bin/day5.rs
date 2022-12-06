@@ -1,5 +1,5 @@
 use eyre::Result;
-use std::collections::HashSet;
+
 use std::fs::File;
 use std::io::{self, BufRead};
 use std::path::Path;
@@ -13,7 +13,7 @@ fn main() -> Result<()> {
 
 fn question1() -> Result<()> {
     let lines = read_lines("inputs/input5.txt")?;
-    let mut sum = vec!["".to_string()];
+    let _sum = vec!["".to_string()];
     let mut counter = 0;
 
     let mut matrix = vec![vec![]; 9];
@@ -73,7 +73,7 @@ fn question1() -> Result<()> {
 
 fn question2() -> Result<()> {
     let lines = read_lines("inputs/input5.txt")?;
-    let mut sum = vec!["".to_string()];
+    let _sum = vec!["".to_string()];
     let mut counter = 0;
     let mut matrix = vec![vec![]; 9];
     for line in lines {
@@ -140,7 +140,7 @@ fn build_stacks(line: String) -> Vec<String> {
         matrix.push(line.chars().nth(counter).unwrap().to_string());
         counter += 4;
     }
-    return matrix;
+    matrix
 }
 
 fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>

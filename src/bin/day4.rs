@@ -45,9 +45,9 @@ fn is_contained_in(line: String) -> bool {
     let first_b = first[1].parse::<i32>().unwrap();
     let second_a = second[0].parse::<i32>().unwrap();
     let second_b = second[1].parse::<i32>().unwrap();
-    let res = (first_a >= second_a && first_b <= second_b)
-        || (first_a <= second_a && first_b >= second_b);
-    return res;
+    
+    (first_a >= second_a && first_b <= second_b)
+        || (first_a <= second_a && first_b >= second_b)
 }
 
 fn is_overlapping(line: String) -> bool {
@@ -59,13 +59,13 @@ fn is_overlapping(line: String) -> bool {
     let second_a = second[0].parse::<i32>().unwrap();
     let second_b = second[1].parse::<i32>().unwrap();
     // +1 because 0..n goes to n-1, we want to include n
-    let vec1 = (first_a..first_b + 1 as i32).collect::<Vec<_>>();
-    let vec2 = (second_a..second_b + 1 as i32).collect::<Vec<_>>();
+    let vec1 = (first_a..first_b + 1_i32).collect::<Vec<_>>();
+    let vec2 = (second_a..second_b + 1_i32).collect::<Vec<_>>();
 
     let set1: HashSet<&i32> = vec1.iter().collect();
     let set2: HashSet<&i32> = vec2.iter().collect();
 
-    return !set1.is_disjoint(&set2);
+    !set1.is_disjoint(&set2)
 }
 
 fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>

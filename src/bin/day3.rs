@@ -67,14 +67,14 @@ fn find_doublon_by_line(line: String) -> char {
             break;
         }
     }
-    return doublon;
+    doublon
 }
 
 fn find_common_by_group(line: String) -> char {
     let mut doublon = '0';
     let mut string = line.lines();
 
-    let tmp = string.next().unwrap();
+    let _tmp = string.next().unwrap();
     let first = string.next().unwrap();
     let middle = string.next().unwrap();
     let last = string.next().unwrap();
@@ -87,7 +87,7 @@ fn find_common_by_group(line: String) -> char {
             break;
         }
     }
-    return doublon;
+    doublon
 }
 
 fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>

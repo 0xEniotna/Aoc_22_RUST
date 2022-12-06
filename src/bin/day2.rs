@@ -17,26 +17,26 @@ fn question1() -> Result<()> {
     let lines = read_lines("inputs/input2.txt")?;
     for line in lines {
         let line = line?;
-        match line.chars().nth(0).unwrap() {
+        match line.chars().next().unwrap() {
             'A' => match line.chars().nth(2).unwrap() {
                 'X' => cumulative_score += score_matrix_shapes[0] + score_matrix_result[1],
                 'Y' => cumulative_score += score_matrix_shapes[1] + score_matrix_result[2],
                 'Z' => cumulative_score += score_matrix_shapes[2] + score_matrix_result[0],
-                _ => println!("{}", "Error"),
+                _ => println!("Error"),
             },
             'B' => match line.chars().nth(2).unwrap() {
                 'X' => cumulative_score += score_matrix_shapes[0] + score_matrix_result[0],
                 'Y' => cumulative_score += score_matrix_shapes[1] + score_matrix_result[1],
                 'Z' => cumulative_score += score_matrix_shapes[2] + score_matrix_result[2],
-                _ => println!("{}", "Error"),
+                _ => println!("Error"),
             },
             'C' => match line.chars().nth(2).unwrap() {
                 'X' => cumulative_score += score_matrix_shapes[0] + score_matrix_result[2],
                 'Y' => cumulative_score += score_matrix_shapes[1] + score_matrix_result[0],
                 'Z' => cumulative_score += score_matrix_shapes[2] + score_matrix_result[1],
-                _ => println!("{}", "Error"),
+                _ => println!("Error"),
             },
-            _ => println!("{}", "Error"),
+            _ => println!("Error"),
         }
     }
     println!("score is: {cumulative_score}");
@@ -50,26 +50,26 @@ fn question2() -> Result<()> {
     let lines = read_lines("inputs/input2.txt")?;
     for line in lines {
         let line = line?;
-        match line.chars().nth(0).unwrap() {
+        match line.chars().next().unwrap() {
             'A' => match line.chars().nth(2).unwrap() {
                 'X' => cumulative_score += score_matrix_shapes[2] + score_matrix_result[0],
                 'Y' => cumulative_score += score_matrix_shapes[0] + score_matrix_result[1],
                 'Z' => cumulative_score += score_matrix_shapes[1] + score_matrix_result[2],
-                _ => println!("{}", "Error"),
+                _ => println!("Error"),
             },
             'B' => match line.chars().nth(2).unwrap() {
                 'X' => cumulative_score += score_matrix_shapes[0] + score_matrix_result[0],
                 'Y' => cumulative_score += score_matrix_shapes[1] + score_matrix_result[1],
                 'Z' => cumulative_score += score_matrix_shapes[2] + score_matrix_result[2],
-                _ => println!("{}", "Error"),
+                _ => println!("Error"),
             },
             'C' => match line.chars().nth(2).unwrap() {
                 'X' => cumulative_score += score_matrix_shapes[1] + score_matrix_result[0],
                 'Y' => cumulative_score += score_matrix_shapes[2] + score_matrix_result[1],
                 'Z' => cumulative_score += score_matrix_shapes[0] + score_matrix_result[2],
-                _ => println!("{}", "Error"),
+                _ => println!("Error"),
             },
-            _ => println!("{}", "Error"),
+            _ => println!("Error"),
         }
     }
     println!("2 - score is: {cumulative_score}");
