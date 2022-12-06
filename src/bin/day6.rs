@@ -33,7 +33,7 @@ fn question2() -> Result<()> {
     for line in lines {
         let line = line?;
         for idx in 0..line.chars().count() + 1 {
-            if idx > 13 && !all_different_in_substr(&line[idx - 14..idx]) {
+            if idx > 13 && all_different_in_substr(&line[idx - 14..idx]) {
                 _res = idx;
                 break;
             }
@@ -44,12 +44,12 @@ fn question2() -> Result<()> {
 }
 
 fn all_different_in_substr(substr: &str) -> bool {
-    let mut res = false;
+    let mut res = true;
     let mut tmp = substr.to_string();
     for (index, char) in substr.chars().enumerate() {
         tmp.remove(index).to_string();
         if tmp.contains(char) {
-            res = true;
+            res = false;
             break;
         }
         tmp = substr.to_string();
